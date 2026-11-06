@@ -1,0 +1,12 @@
+package com.example.pertemuan_8.viewmodel
+
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
+import com.example.pertemuan_8.model.Siswa
+
+class SiswaViewModel : ViewModel() {
+    private val _statusUI = MutableStateFlow(Siswa())
+    val statusUI: StateFlow<Siswa> = _statusUI.asStateFlow()
