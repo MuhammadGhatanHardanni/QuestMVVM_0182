@@ -20,6 +20,18 @@ enum class Navigasi {
     Detail
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun SiswaApp(
+    modifier: Modifier = Modifier,
+    viewModel: SiswaViewModel = viewModel(),
+    navController: NavHostController = rememberNavController()
+){
+    Scaffold { isiRuang ->
+        val uiState = viewModel.statusUI.collectAsState()
+    }
+}
+
 private fun cancelAndBackToFormulir(
     navController: NavHostController
 ){
